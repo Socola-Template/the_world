@@ -1,0 +1,186 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>TheWorld - Template Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">TheWorld Template Documentation by Roy Guan v1.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">TheWorld - Fresh Magazine Template</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 08/16/2014<br>
+					By: Roy Guan<br>
+					Email: <a href="mailto:youremail@yourdomain.com">support@theme-junkie.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my template. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/themejunkie">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#htmlStructure">HTML Structure</a></li>
+			<li><a href="#cssFiles">CSS Files and Structure</a></li>
+			<li><a href="#javascript">JavaScript</a></li>
+			<li><a href="#psdFiles">Fonts</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="htmlStructure"><strong>A) HTML Structure</strong> - <a href="#toc">top</a></h3>
+		<p>This template is a responsive layout with two columns. All of the information within the main content area is nested within a div with an id of "primary". The sidebar's (column #2) content is within a div with an id of "secondary". The general template structure is the same throughout the template. Here is the general structure.</p>
+		
+		<img src="assets/images/htmlstructure.png" alt="HTML Structure" />
+		
+		<p>If you would like to edit the color, font, or style of any elements in one of these columns, you would do the following:</p>
+
+<pre>	.hentry .entry-title a {
+		font-size: someSize_px;
+	} 
+</pre>
+
+		<p>If you find that your new style is not overriding, it is most likely because of a specificity problem. Scroll down in your CSS file and make sure that there isn't a similar style that has more weight.</p>
+
+		<p>I.E.</p>
+
+<pre>	#featured-content .hentry .entry-title a {
+		font-size: someSize_px;
+	}
+</pre>
+
+		<p>So, to ensure that your new styles are applied, make sure that they carry enough "weight" and that there isn't a style lower in the CSS file that is being applied after yours.</p> 
+
+		<hr>
+
+		<h3 id="cssFiles"><strong>B) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+
+		<p>Below is the list of CSS files that being used in this template. </p>
+			<ol>
+				<li>/css/font-awesome.css - We use font-awesome icons on this template</li>
+				<li>/css/jquery.sidr.dark.css - CSS stylings of the Sidr mobile menu for responsive layouts</li>
+				<li>/css/reset.css - Reset all HTML elements to the default value</li>
+				<li>/css/responsive.css - CSS stylings for responsive layouts</li>
+				<li>/css/color/xxxxxx.css - CSS for different color schemas, including: font colors, border colors, and background colors, etc.</li>
+				<li>style.css - The CSS file contains all of the specific stylings for the page. The file is separated into sections using:</li>
+			</ol>
+
+	<pre>
+	1.0 - Reset
+	2.0 - Basic
+	3.0 - Structure
+	4.0 - Header
+	5.0 - Navigation
+	6.0 - Content
+	   6.1 - Featured Content
+	   6.2 - Latest Content
+	   6.3 - Editor's Picks
+	   6.4 - More Content
+	   6.5 - Pagination
+	   6.6 - Singular
+	   6.7 - Comments
+	 7.0 - Sidebar
+	 8.0 - Footer
+	 9.0 - Misc
+	</pre>
+		
+		<p>If you would like to edit a specific section of the site, simply find the appropriate label in the CSS file, and then scroll down until you find the appropriate style that needs to be edited.</p> 
+
+		<hr>
+		
+		<h3 id="javascript"><strong>C) JavaScript</strong> - <a href="#toc">top</a></h3>
+		
+		<p>This template imports seven Javascript files.</p>
+		
+		<ol>
+			<li>/js/hoverIntent.js - Mouse hover effect for the superfish dropdown menu / megamenu</li>
+			<li>/js/jquery-ui.min.js - jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library</li>
+			<li>/js/jquery.custom.js - Most of the animation in this template is carried out from the customs scripts.</li>
+			<li>/js/jquery.jcarousel.min.js - </li>
+			<li>/js/jquery.js - jQuery library, the code & base of all Javascript functions in the template</li>
+			<li>/js/jquery.sidr.min.js - Script of Sidr mobile menu for responsive layouts</li>
+			<li>/js/superfish.js - The script base of the superfish dropdown menu / megamenu</li>		
+		</ol>
+		  
+	<p>If you want to modify the Javascript effects and functions, please edit the jquery.custom.js file. For example, if you want to customize the effect of the Dropdown Menu, you may edit the followiing code:</p>
+	<pre>
+	/*----------------------------------------------------*/
+	/*  Superfish Menu
+	/*----------------------------------------------------*/
+	(function($){ //create closure so we can safely use $ as alias for jQuery
+
+	    $(document).ready(function(){
+
+	        // initialise plugin
+	        var example = $('.sf-menu').superfish({
+	            delay:       100,                            // one second delay on mouseout
+	            speed:       'fast',                          // faster animation speed
+	            autoArrows:  false                            // disable generation of arrow mark-up       
+	        });
+	    });
+
+	})(jQuery);
+	</pre>
+		
+		<hr>
+		
+		<h3 id="psdFiles"><strong>D) Fonts</strong> - <a href="#toc">top</a></h3>
+		
+		<p>I used a free webfont "Titillium" for this template as the default font. If you want to remove the default font, please edit style.css and remove all CSS codes started with the "@font-face" tag</p>
+		
+		<p>You can integrate Google Fonts in this template easily. Just embed the code provided by Google into this template and it will works.</p>
+		
+		<hr>
+		
+		<h3 id="credits"><strong>E) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+		
+		<p>I've used the following images, icons or other files as listed.
+		
+		<ul>
+			<li>font-awesome.css - http://fortawesome.github.io/Font-Awesome/</li>
+			<li>hoverItent.js - https://github.com/joeldbirch/superfish/</li>
+			<li>jquery-ui.min.js - http://jqueryui.com/</li>
+			<li>jquery.jcarousel.min.js - http://sorgalla.com/jcarousel/</li>
+			<li>jquery.js - http://jquery.com/</li>
+			<li>jquery.sidr.min.js - http://www.berriart.com/sidr/</li>
+			<li>superfish.js - https://github.com/joeldbirch/superfish/</li>
+			<li>/images/demo/***.png - http://picjumbo.com/ </li>
+		</ul>
+		<p>
+			All javascript files are license under MIT. All demo images (stock photos) are totally free for commercial and personal use. FontAwesome is licensed under Creative Commons.
+		</p>
+		<hr>
+		
+		<p>Once again, thank you so much for purchasing this template. As I said at the beginning, I'd be glad to help you if you have any questions relating to this template. No guarantees, but I'll do my best to assist. If you have a more general question relating to the templates on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>Roy Guan</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>
